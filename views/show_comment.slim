@@ -1,0 +1,9 @@
+h3 #{@comment.title} 
+p CreateTime: #{@comment.created_at}
+p Title: #{@comment.title}
+p Name: #{@comment.person_name}
+p Content: #{@comment.content}
+p <a href="/comments">back to comments index</a>
+form action="/comments/#{@comment.id}" method="POST"
+  input type="hidden" name="_method" value="DELETE"
+  input type="submit" value="delete this comment"

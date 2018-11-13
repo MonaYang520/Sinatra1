@@ -1,0 +1,12 @@
+doctype html
+html lang="en"
+  head
+    title== @title || "Students"
+    meta charset="utf-8"
+    link rel="stylesheet" href="/styles.css"
+  body
+    header
+      h1 Students Information System
+      == slim :nav
+    section
+      == yield

@@ -1,0 +1,8 @@
+h1 Comments
+a href="/comments/new" Create a new comment
+- if @comments.any?
+  ul#comments
+    -@comments.each do |comment|
+      li <a href="/comments/#{comment.id}">#{comment.title}</a> <a> #{comment.created_at}</a>
+- else
+  p No comments have been created yet!

@@ -1,0 +1,13 @@
+label for="firstname" First Name:
+input#firstname type="text" name="student[firstname]" value="#{@student.firstname}"
+label for="lastname" Last Name:
+input#lastname type="text" name="student[lastname]" value="#{@student.lastname}"
+label for="gender" Gender:
+input#gender type="text" name="student[gender]" value="#{@student.gender}"
+label for="birthdate" Birthdate(mm/dd/yyyy):
+input#birthdate type="text" name="student[birthdate]" value="#{@student.birthdate.strftime("%m/%d/%Y") if @student.birthdate}"
+label for="phone" Phone:
+input#phone type="text" name="student[phone]" value="#{@student.phone}"
+br
+br
+input type="submit" value="Save Student"
